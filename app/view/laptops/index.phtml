@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th >Price</th>
+            <th >Quantity</th>
+            <th >Add to cart</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($laptops as $laptop): ?>
+        <tr>
+            <td><?php echo $laptop->name ?></td>
+            <td><?php echo $laptop->description ?></td>
+            <td><?php echo $laptop->price ?> $</td>
+            <td width="80">
+                <input type="number" value="0">
+            </td>
+            <td>
+                <input type="submit" value="Add to Cart" class="button">
+            </td>
+        </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>

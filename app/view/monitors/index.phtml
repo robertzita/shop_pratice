@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th >Price</th>
+            <th >Quantity</th>
+            <th >Add to cart</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($monitors as $monitor): ?>
+        <tr>
+            <td><?php echo $monitor->name ?></td>
+            <td><?php echo $monitor->description ?></td>
+            <td><?php echo $monitor->price ?> $</td>
+            <td width="80">
+                <input type="number" value="0">
+            </td>
+            <td>
+                <input type="submit" value="Add to Cart" class="button">
+            </td>
+        </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>
